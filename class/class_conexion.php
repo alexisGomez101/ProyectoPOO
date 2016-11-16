@@ -17,7 +17,7 @@
 			$this->link = mysqli_connect($this->host, $this->usuario, $this->contrasena, $this->baseDatos, $this->puerto);
 
 			if (!$this->link){
-				echo "No se pudo conectar con mysql";
+				echo "no se pudo conectar con mysql";
 				exit;
 			}
 		}
@@ -32,10 +32,6 @@
 
 		public function obtenerFila($resultado){
 			return mysqli_fetch_array($resultado);
-		}
-
-		public function cantidadRegistros($resultado){
-			return mysqli_num_rows($resultado);
 		}
 
 		public function liberarResultado($resultado){
