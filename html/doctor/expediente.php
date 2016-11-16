@@ -69,6 +69,9 @@
         <div id="page-wrapper">
         <div class="container-fluid">
         <div class="row">
+        <div id="mostrar">
+            
+        </div>
 
         <div class="col-lg-11">
             <table class = "table table-striped table-hover">
@@ -86,7 +89,7 @@
                                 <input type="text" class="form-control" id="txt-codigo">
                             </td>
                             <td>
-                                <button id="btn-buscar" class="btn btn-primary">Buscar</button>
+                              <button name="btn-buscar" id="btn-buscar" class="btn btn-warning">Buscar</button>
                             </td>
                         <tr>
                             <td>Nombre:</td>
@@ -136,6 +139,7 @@
                             <td>Tratamiento</td>
                             <td>
                                 <select name="slc-tratamiento" id="slc-tratamiento" class="form-control" >
+                                 <option selected="selected"></option>
                                     <option value="analisismedico">Analisis Medico</option>
                                     <option value="examen">Examen</option>
                                     <option value="inyeccion">Inyección</option>
@@ -167,14 +171,16 @@
                             <td>Hora</td>
                             <td>
                                 <select name="slc-hora" id="slc-hora" class="form-control">
-                                    <option value="1">6:00 am</option>
-                                    <option value="2">7:00 am</option>
+                                    <option selected="selected"></option>
+                                    <option value="1">Matutina</option>
+                                    <option value="2">Vespertina</option>
                             </td>
                         </tr>
                         <tr>
                             <td>Doctores</td>
                             <td>
                                 <select name="slc-doctor" id="slc-doctor" class="form-control">
+                                    <option selected="selected"></option>
                                     <option value="1">Doctor1</option>
                                     <option value="2">Doctor2</option>       
                             </td>                  

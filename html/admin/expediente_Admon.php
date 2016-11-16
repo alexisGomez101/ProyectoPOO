@@ -118,33 +118,9 @@
        <div id="page-wrapper">
         <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-12" >
+            <div class="col-lg-12" id="div-Expedientes">
                
-                <table class = "table table-striped table-hover">
-                    <h1 >Expediente</h1>
-                            <tr>
-                                <th>Codigo_Paciente </th>
-                                <th>Codigo_Doctor</th>
-                                <th>Nombre</th>
-                                <th>Peso</th> 
-                                <th>Presion</th>
-                                <th>Sintomas</th>
-                                <th>Citas</th>
-                                <th>Tratamiento</th>
-                                <th>Recetas</th>
-
-                                
-                            </tr>                   
-                            <tr>
-                                <td>1</td> <td>001</td> <td>paciente</td> <td>10k.</td> <td>80/110</td>  <td>sintomas 1</td> <td>12/12/12 </td> <td>pastillas</td> <td>dolofin</td>
-                            </tr>
-<tr>
-                                <td>2</td> <td>002</td> <td>paciente2</td> <td>10k.</td> <td>80/110</td>  <td>sintomas 2</td> <td>12/12/12 </td> <td>pastillas</td> <td>dolofin</td>
-                            </tr>
-                            <tr>
-                                <td>3</td> <td>003</td> <td>paciente3</td> <td>10k.</td> <td>80/110</td>  <td>sintomas 3</td> <td>12/12/12 </td> <td>pastillas</td> <td>dolofin</td>
-                            </tr>
-                </table>
+                
             </div>
         
      
@@ -159,6 +135,8 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../../js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="../../js/controlador_admin.js"></script>
+
 
 </body>
 

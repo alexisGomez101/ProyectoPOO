@@ -81,7 +81,7 @@
                         <a href="javascript:;" data-toggle="collapse" data-target="#farmacia"><i class="fa fa-fw fa-user"></i> Farmacia <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="farmacia" class="collapse">
                             <li>
-                                <a href="sucursales.php">Doctores</a>
+                                <a href="sucursales.php">Sucursales</a>
                             </li>
                             <li>
                                 <a href="ver_registros_medicamentos.php">Medicamentos</a>
@@ -116,29 +116,10 @@
        <div id="page-wrapper">
         <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-12" >
-
-               
-                <table class = "table table-striped table-hover">
-                    <h1 >Doctores</h1>
-                            <tr>
-                                <th>Codigo </th>
-                                <th>Nombre</th>
-                                <th>Identidad</th> 
-                                <th>Direccion</th>
-                                <th>Telefono</th>
-                                
-                                <th>Estado</th>
-                                <th>Fecha_Ingreso</th>
-                                <th>Area</th>
-                                <th>Horario_Trabajo</th>
-                                <th>Sueldo</th> 
-                            </tr>            
-                </table>
+            <div class="col-lg-12" id="div-doctores" >
+        
             </div>
-            <div class="col-lg-12" id="div-doctores">
-
-            </div>
+            
         
      
             </div>

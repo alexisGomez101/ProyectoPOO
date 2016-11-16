@@ -120,28 +120,9 @@
        <div id="page-wrapper">
         <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-12" >
+            <div class="col-lg-12" id="div-citas" >
                
-                <table class = "table table-striped table-hover">
-                    <h1> Citas</h1>
-                            <tr>
-                                <th>Codigo_Paciente </th>
-                                <th>Codigo_Doctor</th>
-                                <th>fecha_citas</th>
-                                <th>Hora</th> 
-                                <th>cupo</th>
-                                
-                            </tr>                   
-                            <tr>
-                                <td>1</td> <td>001</td> <td>12/12/12</td> <td>5:00</td> <td>1</td>   
-                            </tr>
-							<<tr>
-                                <td>2</td> <td>002</td> <td>12/12/12</td> <td>5:00</td> <td>1</td>   
-                            </tr>
-                            <tr>
-                                <td>3</td> <td>003</td> <td>12/12/12</td> <td>5:00</td> <td>1</td>   
-                            </tr>
-                </table>
+                
             </div>
         
      
@@ -156,6 +137,7 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/controlador_admin.js"></script>
 
 </body>
 

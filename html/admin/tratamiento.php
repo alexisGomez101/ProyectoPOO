@@ -118,30 +118,9 @@
        <div id="page-wrapper">
         <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-12" >
+            <div class="col-lg-12" id="div-tratamiento">
                
-                <table class = "table table-striped table-hover">
-                    <h1 >Tratamiento</h1>
-                            <tr>
-                                <th>Codigo_Paciente </th>
-                                <th>Codigo_Doctor</th>
-                                <th>tratamiento</th>
-                                <th>dosis</th> 
-                                <th>duracion</th>
-                                <th>Fecha_Inicio</th>
-                                <th>Fecha_Finalizacion</th>
-                                
-                            </tr>                   
-                            <tr>
-                                <td>1</td> <td>001</td> <td>Pastillas</td> <td>2 cada hora</td> <td>10 dias</td>   <td>12/12/12 </td> <td>13/12/12</td> 
-                            </tr>
-							<tr>
-                                <td>1</td> <td>001</td> <td>Pastillas2</td> <td>2 cada hora</td> <td>10 dias</td>   <td>12/12/12 </td> <td>13/12/12</td> 
-                            </tr>
-                            <tr>
-                                <td>1</td> <td>001</td> <td>Pastillas3</td> <td>2 cada hora</td> <td>10 dias</td>   <td>12/12/12 </td> <td>13/12/12</td> 
-                            </tr>
-                </table>
+                
             </div>
         
      
@@ -156,6 +135,8 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/controlador_admin.js"></script>
+
 
 </body>
 
