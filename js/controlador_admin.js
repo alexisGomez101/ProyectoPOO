@@ -166,9 +166,6 @@ function busqueda(){
 
  $(document).ready(function(){
 
-
-    
-
         $("#btn-actualizar").click(function(){
 
                 validacion();    
@@ -196,101 +193,99 @@ function busqueda(){
     });
 
 
-       
-             $.ajax({
-                url:"../../ajax/procesar_admin.php?accion=3",
-                method:"POST",
-                success: function(respuesta){
+        $.ajax({
+            url:"../../ajax/procesar_admin.php?accion=3",
+            method:"POST",
+            success: function(respuesta){
+                $("#div-doctores").html(respuesta);
+            },
+            error:function(){
 
-                    $("#div-doctores").html(respuesta);
-                },
-                error:function(){
-
-                }
+            }
         });
      
-
-
-  
+    
+    CargarEnfermeros = function(){
         $.ajax({
             url:"../../ajax/procesar_admin.php?accion=4",
             method:"POST",
             success: function(respuesta){
-                $("#div-enfermeros").html(respuesta);
+                
             },
             error:function(){
 
             }
         });
      
-    
+    }
 
-     
+     CargarExpedientes = function(){
         $.ajax({
             url:"../../ajax/procesar_admin.php?accion=5",
             method:"POST",
             success: function(respuesta){
-                $("#div-Expedientes").html(respuesta);
+                
             },
             error:function(){
-            }
-            });
-        
 
-    
+            }
+        });
+
+     
+    }
+     CargarTratamiento = function(){
         $.ajax({
             url:"../../ajax/procesar_admin.php?accion=6",
             method:"POST",
             success: function(respuesta){
-               $("#div-tratamiento").html(respuesta);
+                
             },
             error:function(){
 
             }
         });
      
-    
-    
+    }
+     Cargarcitas = function(){
         $.ajax({
             url:"../../ajax/procesar_admin.php?accion=7",
             method:"POST",
             success: function(respuesta){
-                 $("#div-citas").html(respuesta);
-                 
+                
             },
             error:function(){
 
             }
         });
      
-    
+    }
 
-   
+    CargarSucursales = function(){
         $.ajax({
             url:"../../ajax/procesar_admin.php?accion=8",
             method:"POST",
             success: function(respuesta){
-                $("#div-sucursales").html(respuesta);
+                
             },
             error:function(){
 
             }
         });
      
-    
-  
+    }
+    CargarMedicamentos = function(){
         $.ajax({
             url:"../../ajax/procesar_admin.php?accion=9",
             method:"POST",
             success: function(respuesta){
-               $("#div-Medicamentos").html(respuesta);  
+                
             },
             error:function(){
 
             }
         });
      
-    
+    }
         
        });
     

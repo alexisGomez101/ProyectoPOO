@@ -117,9 +117,27 @@
        <div id="page-wrapper">
         <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-12" id="div-sucursales">
+            <div class="col-lg-12">
                
-               
+                <table class = "table table-striped table-hover">
+                    <h1 style="text-align:center">Sucursales</h1>
+                            <tr>
+                                <th>Nombre de Farmacia</th>
+                                <th>Direccion</th>
+                                <th>Telefono</th> 
+                                
+                            </tr>                   
+                            <tr>
+                            <td>Nombre Estatico</td> <td>Direccion</td> <td>numero</td> 
+                            </tr>
+                            <tr>
+                            <td>Nombre Estatico2</td> <td>Direccion2</td> <td>numero2</td> 
+                            </tr>
+                            <tr>
+                            <td>Nombre Estatico3</td> <td>Direccion3</td> <td>numero3</td> 
+                            </tr>
+                   
+                </table>
             </div>
         
      
@@ -130,8 +148,29 @@
 
     <script src="../../js/jquery.js"></script>
     <script src="../../js/bootstrap.min.js"></script>
-     <script type="text/javascript" src="../../js/controlador_admin.js"></script>
-    
+    <script type="text/javascript">
+    $(document).ready(function()){
+        $("btn-guardar").click(function){
+
+
+            $.ajax({
+                url:"ajax/procesar.php",
+                method:"GET",
+                success:function(respuesta){
+                    $(alert(respuesta));
+                }
+            })
+
+
+
+        }
+    }
+
+      
+
+
+        
+    </script>
 
 </body>
 

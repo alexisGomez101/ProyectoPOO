@@ -1,4 +1,4 @@
-<html lang="en">
+<html>
 
 <head>
 
@@ -96,7 +96,7 @@
                            <tr>
                                 <td>Codigo de Producto</td>
                                 <td>
-                                    <input type="text" name="txt-codigo" id="txt-codigo" class="form-control">
+                                    <input type="text" name="txt-codigo" id="txt-codigo" class="form-control" disabled="disabled">
                                 </td>
                             </tr>
                             <tr>

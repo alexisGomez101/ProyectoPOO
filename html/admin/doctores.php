@@ -1,5 +1,5 @@
 
-<html lang="en">
+<html>
 
 <head>
 
@@ -81,7 +81,7 @@
                         <a href="javascript:;" data-toggle="collapse" data-target="#farmacia"><i class="fa fa-fw fa-user"></i> Farmacia <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="farmacia" class="collapse">
                             <li>
-                                <a href="sucursales.php">Sucursales</a>
+                                <a href="sucursales.php">Doctores</a>
                             </li>
                             <li>
                                 <a href="ver_registros_medicamentos.php">Medicamentos</a>
@@ -116,10 +116,8 @@
        <div id="page-wrapper">
         <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-12" id="div-doctores" >
-        
-            </div>
-            
+ 
+            <div class="col-lg-12" id="div-doctores"></div>
         
      
             </div>
@@ -128,7 +126,7 @@
 
     <script src="../../js/jquery.js"></script>
     <script src="../../js/bootstrap.min.js"></script>
-     <script type="text/javascript" src="../../js/controlador_admin.js"></script>
+     <script src="../../js/controlador_admin.js"></script>
 
 </body>
 

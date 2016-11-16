@@ -1,8 +1,8 @@
+
 function Validacion(){
 
     
                 var parametros = "txt-nombre= "+$("#txt-nombre").val()+"&"+
-                                "txt-codigo="+$("#txt-codigo").val()+"&"+
                                 "txt-cantidad="+$("#txt-cantidad").val()+"&"+
                                 "txt-descripcion="+$("#txt-descripcion").val()+"&"+
                                 "txt-fechaElaboracion="+$("#txt-fechaElaboracion").val()+"&"+
@@ -24,11 +24,7 @@ function Validacion(){
                                 }else {
                                     $("#txt-nombre").css("background-color","fff");
                                 }
-                                if($("#txt-codigo").val()==""){
-                                    $("#txt-codigo").css("background-color","F78181");
-                                }else {
-                                    $("#txt-codigo").css("background-color","fff");
-                                }
+
                                 if($("#txt-cantidad").val()==""){
                                     $("#txt-cantidad").css("background-color","F78181");
                                 }else {
@@ -54,11 +50,11 @@ function Validacion(){
                         }else {
                             alert("Campos llenos");
                             $("#txt-nombre").css("background-color","fff");
-                            $("#txt-codigo").css("background-color","fff");
                             $("#txt-cantidad").css("background-color","fff");
                             $("#txt-descripcion").css("background-color","fff");
                             $("#txt-fechaElaboracion").css("background-color","fff");
                             $("#txt-fechaVencimiento").css("background-color","fff");
+                            Registrar();
                             }
                  },
                     error:function(){
@@ -67,6 +63,8 @@ function Validacion(){
                 }); 
             
 }
+
+
 
 function busqueda(){
 
@@ -90,13 +88,18 @@ function busqueda(){
 
 
 
+
  $(document).ready(function(){
              $("#btn-actualizar").click(function(){
                 Validacion();
              });
 
+
+
              $("#btn-guardar").click(function(){
-                Validacion();
+              Validacion();
+
+       
              });
 
 
@@ -171,7 +174,27 @@ function busqueda(){
      
     }
 
+    Registrar = function (){
+                     var parametros ="txt-nombre= "+$("#txt-nombre").val()+"&"+
+            "txt-cantidad="+$("#txt-cantidad").val()+"&"+
+            "txt-descripcion="+$("#txt-descripcion").val()+"&"+
+            "txt-fechaElaboracion="+$("#txt-fechaElaboracion").val()+"&"+
+            "txt-fechaVencimiento="+$("#txt-fechaVencimiento").val(); 
 
+                $.ajax({
+                    url:"../../ajax/procesar_farmacia.php?accion=8",
+                    method:"POST",
+                    data: parametros,
+                    success:function(respuesta){
+                        alert(respuesta);
+                    },
+                     error:function(){
+                        alert("Ocurrio un error.");
+                    }
+                });
+    }
 
 
         });
+
+
