@@ -5,7 +5,7 @@
 		private $usuario="root";
 		private $contrasena="";
 		private $host="localhost";
-		private $baseDatos="db_clinica(3)";
+		private $baseDatos="db_clinica2";
 		private $puerto="3306";
 		private $link;
 
@@ -32,10 +32,6 @@
 
 		public function obtenerFila($resultado){
 			return mysqli_fetch_array($resultado);
-		}
-
-		public function cantidadRegistros($resultado){
-			return mysqli_num_rows($resultado);
 		}
 
 		public function liberarResultado($resultado){
