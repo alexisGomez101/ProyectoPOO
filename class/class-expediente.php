@@ -2,49 +2,55 @@
 
 	class Expediente{
 
-		private $codigoExpediente;
+		private $edad;
 		private $peso;
+		private $altura;
+		private $temperatura;
 		private $presion;
 		private $sintomas;
 		private $tratamiento;
-		private $receta;
-		private $citas;
+		private $fecha;
+		private $hora;
 		private $doctor;
 
-		public function __construct($codigoExpediente,
+		public function __construct($edad,
 					$peso,
+					$altura,
+					$temperatura,
 					$presion,
 					$sintomas,
 					$tratamiento,
-					$receta,
-					$citas,
-					$doctor){
-			$this->codigoExpediente = $codigoExpediente;
+					$fecha,
+					$hora,
+					$doctor
+					$){
+			$this->edad = $edad;
 			$this->peso = $peso;
-			$this->presion = $presion;
+			$this->altura = $altura;
 			$this->sintomas = $sintomas;
 			$this->tratamiento = $tratamiento;
-			$this->receta = $receta;
-			$this->citas = $citas;
+			$this->tratamiento = $tratamiento;
+			$this->fecha = $fecha;
+			$this->hora = $hora;
 			$this->doctor = $doctor;
-		}
-		public function getCodigoExpediente(){
-			return $this->codigoExpediente;
-		}
-		public function setCodigoExpediente($codigoExpediente){
-			$this->codigoExpediente = $codigoExpediente;
 		}
 		public function getPeso(){
 			return $this->peso;
 		}
-		public function setPeso($peso){
+		public function set($codigoExpediente){
 			$this->peso = $peso;
 		}
-		public function getPresion(){
-			return $this->presion;
+		public function getAltura(){
+			return $this->altura;
 		}
-		public function setPresion($presion){
-			$this->presion = $presion;
+		public function setAltura($altura){
+			$this->altura = $altura;
+		}
+		public function getTemperatura(){
+			return $this->temperatura;
+		}
+		public function setTemperatura($temperatura){
+			$this->temperatura = $temperatura;
 		}
 		public function getSintomas(){
 			return $this->sintomas;
@@ -52,30 +58,20 @@
 		public function setSintomas($sintomas){
 			$this->sintomas = $sintomas;
 		}
-		public function getTratamiento(){
-			return $this->tratamiento;
+	
+		public function getHora(){
+			return $this->hora;
 		}
-		public function setTratamiento($tratamiento){
-			$this->tratamiento = $tratamiento;
+		public function setHora($hora){
+			$this->hora = $hora;
 		}
-		public function getReceta(){
-			return $this->receta;
+		public function getFecha(){
+			return $this->fecha;
 		}
-		public function setReceta($receta){
-			$this->receta = $receta;
+		public function setFecha($fecha){
+			$this->fecha = $fecha;
 		}
-		public function getCitas(){
-			return $this->citas;
-		}
-		public function setCitas($citas){
-			$this->citas = $citas;
-		}
-		public function getDoctor(){
-			return $this->doctor;
-		}
-		public function setDoctor($doctor){
-			$this->doctor = $doctor;
-		}
+		
 
 		public function ActualizarExpediente(){}
 		
@@ -89,5 +85,32 @@
 				" Citas: " . $this->citas . 
 				" Doctor: " . $this->doctor->toString();
 		}
+
+		public function guardarRegistro($conexion){
+
+            $sql = sprintf(
+                "INSERT INTO tbl_preclinica(cod_Preclinica,peso, altura, temperatura)
+                VALUES (NULL, '%s', '%s')",  
+                        stripslashes($this->edad),
+                        stripslashes($this->peso),
+                        stripslashes($this->altura),
+                        stripslashes($this->temperatura),
+                ).sprintf(
+                "INSERT INTO tbl_citas(id_citas, fecha, hora)
+                VALUES (NULL, '%s', '%s')",  
+                        stripslashes($this->fecha),
+                        stripslashes($this->hora),
+                ).sprintf(
+                "INSERT INTO tbl_expedientes(id_expediente, sintomas)
+                VALUES (NULL, '%s')",  
+                        stripslashes($this->sintomas),
+                );
+            //echo $sql;
+            $resultado = $conexion->ejecutarInstruccion($sql);
+            if ($resultado)
+                echo "Se Registro";
+            else
+                echo "nada";
+        }
 	}
 ?>
