@@ -1,6 +1,7 @@
 <html>
 <html lang="en">
-
+include_once("../class/class_conexion.php");
+$conexion= new Conexion();
 <head>
 
     <meta charset="utf-8">
@@ -63,19 +64,20 @@
                     </li>
                 </ul>
             </div>
+
+
            
         </nav>
         
         <div id="page-wrapper">
         <div class="container-fluid">
         <div class="row">
-
-        <div class="col-lg-11">
-            <table class = "table table-striped table-hover">
-                    
-            </table>
-        </div>
             
+        </div>
+        <div id="mostrar">
+        </div>
+
+
         <h1>Expediente<br></h1>
             <div id="respuesta" class="col-lg-11 well" >
                 <h2>Datos Generales</h2>
@@ -83,29 +85,29 @@
                         <tr>
                             <td>Codigo</td>
                             <td>
-                                <input type="text" class="form-control" id="txt-codigo">
+                                <input type="text" class="form-control" id="txt-codigo" name="txt-codigo">
                             </td>
                             <td>
-                                <button id="btn-buscar" class="btn btn-primary">Buscar</button>
+                                <button type="summit" name="btn-buscar" id="btn-buscar" class="btn btn-warning">Buscar</button>
                             </td>
-                        <tr>
-                            <td>Nombre:</td>
-                            <td><input type="text" id="txt-nombre" class="form-control"></td>
-                        </tr>
-                        <tr>
-                            <td>Observaciones</td>
-                            <td>
-                                <textarea type="text"  id="txt-observaciones" class="form-control" > </textarea>
-                            </td>
-                        </tr>
+                            <tr>
+                                <div class="col-lg-12" id="div-mostrar">
+                                </div>
+                            </tr>
+                    </div>
                 </table>
+
+                <div id="page-wrapper">
+                <div class="container-fluid">
+                <div class="row">
+                   
+             
+                    </div>
+                </div>
+            </div>
 
             <h2>Preclinica</h2>
                 <table class = "table table-striped table-hover c">
-                    <tr>
-                        <td>Edad:</td>
-                        <td><input type="text" id="txt-edad" class="form-control"></td>
-                    </tr>
                     <tr>
                         <td>Peso</td>
                         <td><input type="text" id="txt-peso" class="form-control"></td>
@@ -118,10 +120,6 @@
                         <td>Temperatura</td>
                         <td><input type="text" id="txt-temperatura" class="form-control"></td>
                     </tr>
-                     <tr>
-                        <td>Presion:</td>
-                        <td><input type="text" id="txt-presion" class="form-control"></td>
-                    </tr> 
                 </table>
                         
             <h2>Consulta</h2>
@@ -129,29 +127,8 @@
                         <tr>
                             <td>Sintomas</td>
                             <td>
-                                <textarea type="text" id="txt-sintomas" class="form-control"></textarea>
+                                <input type="text" id="txt-sintomas" class="form-control"></input>
                             </td>
-                        </tr>
-                        <tr>
-                            <td>Tratamiento</td>
-                            <td>
-                                <select name="slc-tratamiento" id="slc-tratamiento" class="form-control" >
-                                    <option value="analisismedico">Analisis Medico</option>
-                                    <option value="examen">Examen</option>
-                                    <option value="inyeccion">Inyección</option>
-                                    <option value="nebulizacion">Nebulización</option>
-                                    <option value="radiografias">Radiografías</option>
-                                    <option value="ultrasonido">Ultrasonido</option>
-                                    <option value="hemograma">Hemograma</option>
-                                    <option value="tomografia">Tomografía</option> 
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Especificaciones: </td>
-                            <td>
-                                <textarea type="text" id="txt-especificaciones" class="form-control"></textarea>
-                            <td>
                         </tr>
                     </table>
                 
@@ -166,18 +143,8 @@
                         <tr>
                             <td>Hora</td>
                             <td>
-                                <select name="slc-hora" id="slc-hora" class="form-control">
-                                    <option value="1">6:00 am</option>
-                                    <option value="2">7:00 am</option>
+                                <input type="text" id="txt-hora-cita" class="form-control">
                             </td>
-                        </tr>
-                        <tr>
-                            <td>Doctores</td>
-                            <td>
-                                <select name="slc-doctor" id="slc-doctor" class="form-control">
-                                    <option value="1">Doctor1</option>
-                                    <option value="2">Doctor2</option>       
-                            </td>                  
                         </tr>
                     
                     <tr>
@@ -194,7 +161,8 @@
     <script src="../../js/jquery.js"></script>
     <script src="../../js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../js/controlador_doctores.js"></script>
-   
+
+    
 
 </body>
 
