@@ -86,35 +86,10 @@
        <div id="page-wrapper">
         <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-12">
-                <table class = "table table-striped table-hover">
-                    <h1 style="text-align:center">Pago Medicamento </h1>
-                        <tr>
-                        <td>
-                             <input type="text" name="busqueda" id="txt-busqueda"  placeholder="Codigo_empleado" autocomplete=”on”  class="form-control">
-                        </td>
-                        <td>
-                           
-                           <button name="btn-buscar" id="btn-buscar" class="btn btn-warning">Buscar</button>
-                
-                        </td>
-                    </tr>
-                            <tr>
+            <div class="col-lg-12" id="div-Pagomedicamentos">
+                 
 
-                                <th>Codigo_Paciente</th>
-                                <th>Nombre del Medicamento</th>
-                                <th>Codigo de Producto</th>
-                                <th>Cantidad</th> 
-                                <th>Valor por Cantidad</th>  
-                                <th>Cancelar</th>  
-                            </tr>   				
-        				    <tr>
-                            <td>000-00-00</td><td>Nombre Estatico</td> <td>Codigo Estatico</td> <td>Cantidad</td> <td>Precio</td> <td><button class="btn" name="btn-pagar" id="btn-pagar">Pagar</button></td>
-                            </tr>
-                            
 
-                   
-                </table>
             </div>
         
      

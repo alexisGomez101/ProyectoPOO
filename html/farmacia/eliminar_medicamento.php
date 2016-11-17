@@ -1,3 +1,10 @@
+<?php
+    include_once("../../class/class_conexion.php");
+    include_once ("../../class/class_sucursal.php");
+    include_once ("../../class/class_registrarMedicamento.php");
+    $conexion = new Conexion();
+
+?>
 <html lang="en">
 
 <head>
@@ -91,11 +98,11 @@
         <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
-                <table class = "table table-striped table-hover">
-                    <h1 style="text-align:center">Registrar Medicamento</h1>
-                            <tr>
+<table class = "table table-striped table-hover">
+                    <h1 style="text-align:center">Eliminar Medicamento</h1>
+                    <tr>
                         <td>
-                             <input type="text" name="busqueda" id="txt-busqueda"  placeholder="Codigo_Medicamento" autocomplete=”on”  class="form-control">
+                             <input type="text" name="txt-busqueda" id="txt-busqueda"  placeholder="Codigo_Medicamento" autocomplete=”on”  class="form-control">
                         </td>
                         <td>
                            
@@ -105,28 +112,29 @@
                         </td>
                     </tr>
                             <tr>
-                                <td>Codigo de Producto</td>
-                                <td>
-                                    <input type="text" name="txt-codigo" id="txt-codigo" class="form-control" disabled="disabled">
-                                </td>
-                            </tr>
-                            <tr>
                                 <td>Nombre del Medicamento</td>
                                 <td>
                                     <input type="text" name="txt-nombre" id="txt-nombre" class="form-control">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Precio</td>
+                                <td>
+                                    <input type="text" name="txt-precio" id="txt-precio" class="form-control">
                                 </td>
                             </tr>
                             
                             <tr>
                                 <td>Fecha de Elaboracion</td>
                                 <td>
-                                    <input type="text" name="txt-fechaElaboracion" id="txt-fechaElaboracion" class="form-control">
+                                    <input type="date" name="txt-fechaElaboracion" id="txt-fechaElaboracion" class="form-control">
                                 </td>
                             </tr>
                             <tr>
                                 <td>Fecha de Vencimiento</td>
                                 <td>
-                                    <input type="text" name="txt-fechaVencimiento" id="txt-fechaVencimiento" class="form-control">
+                                    <input type="date" name="txt-fechaVencimiento" id="txt-fechaVencimiento" class="form-control">
                                 </td>
                             </tr>
                             <tr>
@@ -135,10 +143,15 @@
                                     <input type="text" name="txt-cantidad"  id="txt-cantidad" class="form-control">
                                 </td>
                             </tr>
-                            <tr>
-                                <td>Descripcion</td>
-                                <td><textarea rows="5" cols="35" class="form-control" id="txt-descripcion" name="txt-descripcion"></textarea></td>
-                            </tr>
+                          <tr>
+                        <td>Sucursal Proveedora:</td>
+                            <td>
+                                <?php 
+                                   Sucursal::generarListaSucursal($conexion);
+                                ?>                                
+                            </td>
+
+                         </tr>
                         
                             <tr>
                                 <td colspan="2">

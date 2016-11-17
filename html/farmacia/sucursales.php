@@ -88,27 +88,9 @@
        <div id="page-wrapper">
         <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-12" id="div-sucursales">
                
-                <table class = "table table-striped table-hover">
-                    <h1 style="text-align:center">Sucursales</h1>
-                            <tr>
-                                <th>Nombre de Farmacia</th>
-                                <th>Direccion</th>
-                                <th>Telefono</th> 
-                                <th>Administrar</th>  
-                            </tr>                   
-                            <tr>
-                            <td>Nombre Estatico</td> <td>Direccion</td> <td>numero</td> <td><button class="btn btn-primary" name="btn-ir">Ir</button></td>
-                            </tr>
-                            <tr>
-                            <td>Nombre Estatico2</td> <td>Direccion2</td> <td>numero2</td> <td><button class="btn btn-primary" name="btn-ir">Ir</button></td>
-                            </tr>
-                            <tr>
-                            <td>Nombre Estatico3</td> <td>Direccion3</td> <td>numero3</td> <td><button class="btn btn-primary" name="btn-ir">Ir</button></td>
-                            </tr>
-                   
-                </table>
+                
             </div>
         
      

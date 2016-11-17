@@ -89,7 +89,7 @@
        <div id="page-wrapper">
         <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-12" id="div-recetas">
                 <table class = "table table-striped table-hover">
                     <h1 style="text-align:center">Recetas</h1>
                             <tr>
@@ -110,14 +110,7 @@
                             <td><input type="text" name="txt-codigoPaciente"> <button class="btn btn-primary" id="btn-ir">ir</button></td> <td>Nombre</td>  <td><a href="prueba.pdf">ver</a></td> 
                             <tr>
                                 
-        <?php
-             include_once("../../fpdf/fpdf.php");
-             $pdf=new FPDF();
-             $pdf->AddPage();
-             $pdf->SetFont('Arial','B',16);
-             $pdf->Cell(40,10,'PDF creado, a partir de las recetas otorgadas por el Doctor. ');
-             $pdf->Output('prueba.pdf','F');
-        ?>
+
 
 
                             </tr>                    
@@ -128,7 +121,14 @@
             </div>
         </div>
     </div>
-    
+            <?php
+             include_once("../../fpdf/fpdf.php");
+             $pdf=new FPDF();
+             $pdf->AddPage();
+             $pdf->SetFont('Arial','B',16);
+             $pdf->Cell(40,10,'PDF creado, a partir de las recetas otorgadas por el Doctor. ');
+             $pdf->Output('prueba.pdf','F');
+        ?>
 
     <script src="../../js/jquery.js"></script>
     <script src="../../js/bootstrap.min.js"></script>
