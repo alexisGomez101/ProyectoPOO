@@ -19,6 +19,10 @@
 </head>
 
 <body>
+    <?php session_start(); 
+    if(!isset($_SESSION['cod_usuario']))
+        header("Location: index1.php");
+?>
 
     <div id="wrapper">
 
@@ -40,7 +44,7 @@
                     <ul class="dropdown-menu">
                         
                         <li>
-                            <a href="index.php"><i class="fa fa-fw fa-power-off"></i> Cerrar sesion</a>
+                            <a href="php/cerrar_sesion.php"><i class="fa fa-fw fa-power-off"></i> Cerrar sesion</a>
                         </li>
                     </ul>
                 </li>

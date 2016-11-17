@@ -19,6 +19,10 @@
 </head>
 
 <body>
+    <?php session_start(); 
+    if(!isset($_SESSION['cod_usuario']))
+        header("Location: index1.php");
+    ?>
 
     <div id="wrapper">
 
@@ -67,7 +71,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Usuario <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="#"><i class="fa fa-fw fa-power-off"></i> Cerrar sesion</a>
+                            <a href="php/cerrar_sesion.php"><i class="fa fa-fw fa-power-off"></i> Cerrar sesion</a>
                         </li>
                     </ul>
                 </li>
