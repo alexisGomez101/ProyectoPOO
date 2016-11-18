@@ -76,60 +76,46 @@
                 <table class = "table table-striped table-hover">  
               
                             <tr>
-                                <td >Nº. Expediente:</td>
+                                <td >Nombre:</td>
                                     <td colspan="2" >
-                                        <input type="text" name="txt-noExpediente" id="txt-noExpediente" class="form-control">
+                                        <input type="text" name="txt-nombre" id="txt-nombre" class="form-control">
                                     </td>
                             </tr>
                             <tr>
-                                 <td >Fecha: </td>
+                                 <td >Cantidad: </td>
                                 <td colspan="2">
-                                    <input type="text" name="txt-fecha" id="txt-fecha" class="form-control">
+                                    <input type="text" name="txt-cantidad" id="txt-cantidad" class="form-control">
                                 </td>
 
                             </tr>
                             
 
                             <tr >
-                                <td >Nombre</td>
+                                <td >Fecha</td>
                                 <td colspan="2">
-                                    <input type="text" name="txt-nombre" id="txt-nombre" class="form-control">
+                                    <input type="text" name="txt-fecha" id="txt-fecha" class="form-control">
                                 </td>
                                 
                             </tr>
-                            
-                            
-                            <tr>
-                                <td>Doctor</td>
-                                <td>
-                                    <input type="text" name="txt-edad" id="txt-edad" class="form-control">
-                                </td>
-                                 <td> Cantidad </td>
-                                <td>
-                                    <input type="text" name="txt-peso" id="txt-peso" class="form-control"></td>
-                            </tr>
-
-                </table>              
-
-
-                <table class = "table table-striped table-hover">          
-                            <tr>
-                                <td>Descripcion </td>
-                                <tr>
-                                    <td>
-                                    <textarea type="text" name="txt-descripcion" id="txt-descripcion" class="form-control"></textarea>
-                                    </td>
-                                </tr>
-                            </tr>
-                                                                                                 
-                            <tr>
+                             <tr >
+                                <td >Precio</td>
                                 <td colspan="2">
-                                    <button name="btn-guardar" id="btn-guardar" class="btn btn-primary">Guardar</button>
-                                    <button name="btn-imprimir" id="btn-imprimir" class="btn btn-warning">Imprimir</button>
+                                    <input type="text" name="txt-precio" id="txt-precio" class="form-control">
                                 </td>
-                            </tr>     
-
-                </table>
+                                
+                            </tr>  
+                            <tr >
+                                <td>Descripcion</td>
+                                <td colspan="2">
+                                    <input type="text" name="txt-descripcion" id="txt-descripcion" class="form-control">
+                                </td>
+                                <td>
+                                    <button type="summir" name="btn-guardar-receta" id="btn-guardar-receta" class="btn btn-primary">Guardar</button>
+                                <button name="btn-imprimir" id="btn-imprimir" class="btn btn-warning">Imprimir</button>
+                                </td>
+                            </tr>
+                            
+                </table>              
         </div>
         </div>
     </div>
