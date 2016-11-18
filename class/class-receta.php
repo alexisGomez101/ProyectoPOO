@@ -53,12 +53,12 @@ class receta{
 	public function guardarRegistroReceta($conexion){
 
             $sql = sprintf(
-                "INSERT INTO tbl_medicinas(cod_medicamento, nombre, cantidad, fecha, precio)
-                VALUES (null, '%s', '%s', '%s', '%s')",
-                        stripslashes($this->nombre),
+                "INSERT INTO tbl_medicinas(cod_medicamento, Cantidad, nombre, precio, fecha_Elaboracion,fecha_Vencimiento cod_Sucursal)
+                VALUES (null, '%s', '%s', '%s', '%s, '%s', '%s')",
                         stripslashes($this->cantidad),
-                        stripslashes($this->fecha),
+                        stripslashes($this->nombre),
                         stripslashes($this->precio),
+                        stripslashes($this->fecha),
                         stripslashes(""),
                         stripslashes(4)
                 );
