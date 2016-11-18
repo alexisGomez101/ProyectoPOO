@@ -58,7 +58,9 @@ class receta{
                         stripslashes($this->nombre),
                         stripslashes($this->cantidad),
                         stripslashes($this->fecha),
-                        stripslashes($this->precio)
+                        stripslashes($this->precio),
+                        stripslashes(""),
+                        stripslashes(4)
                 );
         
             //echo $sql;
