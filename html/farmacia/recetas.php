@@ -1,3 +1,54 @@
+<?php
+
+include_once("../../fpdf/fpdf.php");
+
+class PDF extends FPDF
+{
+
+}
+
+//DECLARACION DE HOJA
+
+$pdf = new PDF('P','mm', 'letter');
+$pdf->SetMargins(20,18); 
+$pdf->AliasNBPages();
+$pdf->AddPage();
+
+//Datos TITULO
+$pdf->SetTextColor(0x00,0x00,0x00);
+$pdf->SetFont("Arial","b",9);
+$pdf->Cell(0,4,'RECETA',0,1,'C');
+
+//Conexion
+include_once("../../class/class_conexion.php");
+$conexion = new Conexion();
+if($conexion)
+    echo "bien";
+else
+    echo "Mal";
+
+//Mostrar tabla
+$pdf->Ln();
+
+$sql = "SELECT * FROM tbl_receta "  ;
+$resultado = $conexion -> ejecutarInstruccion($sql);
+if($resultado)
+    echo "bienn";
+else
+    echo "Mal";
+
+    $pdf->cell(30,10,"Recetas #",1,0,'C');
+    $pdf->cell(60,10,"Descripcion",1,1,'C');
+
+while($fila = $conexion->obtenerFila($resultado) )
+{
+    $pdf->cell(30,10,$fila["id_receta"],1,0,'C');
+    $pdf->cell(60,10,$fila["descripcion_receta"],1,1,'C');
+
+}
+$pdf->output('prueba3.pdf','F');
+
+?>
 <html lang="en">
 
 <head>
@@ -26,7 +77,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="../index.php">Menu</a>
+                <a class="navbar-brand" href="#">Menu</a>
             </div>
             <ul class="nav navbar-right top-nav">
 
